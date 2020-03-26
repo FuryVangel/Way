@@ -1,0 +1,366 @@
+.tabs {
+  width: 100%;
+  max-width: 1445px;  
+  background-image: url("../img/icons/map.png");
+  background-position: right 0 top 125px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.tabs__wrapper {
+  max-width: 1220px;
+  padding: 0 25px;
+  margin: 0 auto;    
+}
+
+.tab-header {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  width: 899px;
+  border-bottom: 1px solid $grey;
+}
+
+.tab-header__item {
+  padding: 0 0 17px 0;
+  margin-right: 99px;
+  cursor: pointer;
+  color: $grey;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.41px;
+}
+
+.tab-header__item.active {
+  color: $accentMain;
+  position: relative;
+  transform: all 0.2s ease;
+}
+
+.tab-content__item {
+  display: none;
+}
+
+.tab-content__item.active {
+  display: block;
+}
+
+.tab-content__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.item-header {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 30%;
+  margin-top: 100px;
+  margin-right: 70px;
+
+  h2 {
+    font-size: 55px;
+    font-weight: 600;
+    letter-spacing: -1.25px;
+    padding-bottom: 57px;
+    color: $dark;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.47px;
+    line-height: 28px;
+    color: $semiDark;
+    position: relative;
+    padding-bottom: 50px;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width:175px;
+      height: 3px;
+      background-color: $accentMain;
+      left: 0;
+      top: -30px;
+    }
+  }
+
+  button {
+    padding: 30px 0;
+    width: 250px;
+    color: $white;
+    background-color: $accentMain;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $accentHover;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+.item-comment-wrapper {
+  min-height: 596px;
+  width: 700px;
+  position: relative;
+  margin-top: 80px;
+}
+
+.item-comment-wrapper--greece {
+  background: url("../img/greece-tabs.png") no-repeat; 
+}
+
+.item-comment-wrapper--albania {
+  background: url("../img/albania-tabs.png") no-repeat;
+}
+
+.item-comment-wrapper--macedonia {
+  background: url("../img/macedonia-tabs.png") no-repeat;
+}
+
+.item-comment-wrapper--montenegro {
+  background: url("../img/montenegro-tabs.png") no-repeat;
+}
+
+.item-comment-wrapper--croatia {
+  background: url("../img/croatia-tabs.png") no-repeat;
+}
+
+.item-comment {
+  background-color: $white;
+  width: 382px;
+  height: max-content;
+  margin-top: 114px;
+  padding: 30px;
+  z-index: 20;
+  position: absolute;
+  right: 0;
+
+  h3 {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: -0.69px;
+    padding-bottom: 35px;
+    color: $dark;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.41px;
+    line-height: 28px;
+    color: $semiDark;
+    position: relative;
+    padding-bottom: 35px;        
+    background-color: $white;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 68px;
+      height: 0.73px;
+      background-color: $accentMain;
+      left: 0;
+      top: -20px;
+    }        
+  }
+
+  p + p {
+    padding-bottom: 0;
+  }
+
+  .item-avatar {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.47px;   
+    padding-left: 50px;    
+    padding-top: 6px; 
+    color: $dark;
+    position: relative;
+  }
+
+  .item-avatar--greece::before {
+    content: '';
+    background-image: url("../img/ava-greece.png");
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+  }
+
+  .item-avatar--albania::before {
+    content: '';
+    background-image: url("../img/ava-albania.png");
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+  }
+
+  .item-avatar--macedonia::before {
+    content: '';
+    background-image: url("../img/ava-macedonia.png");
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+  }
+
+  .item-avatar--montenegro::before {
+    content: '';
+    background-image: url("../img/ava-montenegro.png");
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+  }
+
+  .item-avatar--croatia::before {
+    content: '';
+    background-image: url("../img/ava-croatia.png");
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .tabs {
+    background-image: none;
+    margin-top: 98px;
+  }
+
+  .tabs__wrapper {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .tab-header {
+    margin: 0 35px;
+  }
+
+  .tab-content__item-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .item-header {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 35px;
+    padding: 0 20px;
+
+    h2 {
+      font-size: 30px;
+      letter-spacing: 0;
+      line-height: 150%;
+      padding-bottom: 25px;
+    }
+
+    p {
+      text-align: center;
+      padding-bottom: 25px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    button {
+      width: 250px;
+      padding: 19px 0;
+      font-size: 10px;
+
+      &:hover {
+        background-color: $accentMain;
+      }
+
+      &:active {
+        background-color: $accentHover;
+      }
+    }
+  }
+
+  .item-comment-wrapper {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    min-height: 415px;
+  }
+
+  .item-comment {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 382px;
+    height: 367px;
+    max-height: 100%; 
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tabs {
+    margin-top: 88px;
+  }
+
+  .tab-header {
+    margin: 0 15px;
+  }
+
+  .item-header {
+    margin-top: 25px;
+    padding: 0 15px;
+
+    h2 {
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+
+    p {
+      padding-bottom: 20px;
+    }
+
+    button {
+      width: 288px;
+    }
+  }
+
+  .item-comment {
+    width: 268px;
+    height: 431px;
+    max-height: 100%;
+    padding: 30px 20px;
+  }
+}

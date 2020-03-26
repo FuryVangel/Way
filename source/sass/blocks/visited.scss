@@ -1,0 +1,341 @@
+.visited__wrapper {
+  max-width: 1220px;
+  margin: 198px auto 0;
+  padding: 0 25px;
+}
+
+.visited__header {
+  width: 358px;
+  margin-bottom: 60px;
+  overflow: hidden;  
+
+  h2 {
+    font-size: 55px;
+    font-weight: 500;
+    letter-spacing: -1.25px;
+    padding-bottom: 64px;
+    color: $dark;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.47px;  
+    color: rgba(44, 46, 63, 0.7);
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 229px;
+      height: 4px;
+      background-color: $accentMain;
+      left: 0;
+      top: -30px;
+    }
+  }
+}
+
+.visited-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.visited-item {
+  width: 30%;
+  min-height: 430px;
+  background-color: #20C8CF;
+  margin-right: 5%;
+  margin-bottom: 101px;
+  position: relative;
+  cursor: pointer;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.visited-item--greece {
+  background: url("../img/greece.png") no-repeat center center / cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/greece2x.png");
+    background-size: 350px 430px;
+  }
+}
+
+.visited-item--albania {
+  background: url("../img/albania.png") no-repeat center center / cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/albania2x.png");
+    background-size: 350px 430px;
+  }
+}
+
+.visited-item--macedonia {
+    background: url("../img/macedonia.png") no-repeat center center / cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/macedonia2x.png");
+      background-size: 350px 430px;
+    }
+}
+
+.visited-item--montenegro {
+  background: url("../img/montenegro.png") no-repeat center center / cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/montenegro2x.png");
+    background-size: 350px 430px;
+  }
+}
+
+.visited-item--croatia {
+  background: url("../img/croatia.png") no-repeat center center / cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/croatia2x.png");
+    background-size: 350px 430px;
+  }
+}
+
+.visited-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  outline: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 21, 23, .6);
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+.visited-button a {
+  display: block;
+  text-decoration: none;
+  width: 266px;
+  text-align: center;
+  padding: 30px 0;
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+  border: 1px solid $white;
+  transform: translate(-50%, -50%) scale(0);
+  transition: .3s ease-in-out;
+  background: transparent;
+  cursor: pointer;
+}
+
+.visited-item:hover .visited-button {
+  opacity: 1;
+}
+
+.visited-item:hover .visited-button a{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.visited-title {
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  text-align: center;
+  left: 67px;
+  right: 67px;
+  text-align: center;
+
+  p {
+    padding: 16px 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: $dark;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .visited__wrapper {
+    max-width: 646px;
+    margin: 80px auto 0;
+    padding: 0 20px;
+  }
+
+  .visited-list {
+    flex-wrap: wrap;
+  }
+
+  .visited__header {
+    width: 343px;
+    text-align: center;
+    margin: 0 auto 40px;
+
+    h2 {
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 150%;
+      padding-bottom: 25px;
+    }
+
+    p:before {
+        display: none;
+      }      
+  }
+
+  .visited-item {
+    width: 47.5%;
+    min-height: 425px;
+    margin-right: 0;
+    margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+  }
+
+  .visited-item--greece {
+    background: url("../img/greece-tab.png") no-repeat center center / cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/greece-tab2x.png");
+      background-size: 288px 425px;
+    }
+  }
+
+  .visited-item--albania {
+    background: url("../img/albania-tab.png") no-repeat center center / cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/albania-tab2x.png");
+      background-size: 288px 425px;
+    }
+  }
+
+  .visited-item--macedonia {
+    background: url("../img/macedonia-tab.png") no-repeat center center / cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/macedonia-tab2x.png");
+      background-size: 288px 425px;
+    }
+  }
+
+  .visited-item--montenegro {
+    background: url("../img/montenegro-tab.png") no-repeat center center / cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/montenegro-tab2x.png");
+      background-size: 288px 425px;
+    }
+  }
+
+  .visited-item--croatia {
+    background: url("../img/croatia-tab.png") no-repeat center center / cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/croatia-tab2x.png");
+      background-size: 288px 425px;
+    }
+  }
+
+  .visited-title {
+    text-align: center;
+    left: 37px;
+    right: 37px;
+
+    p {
+      padding: 16px 0;
+      font-weight: 500;
+      color: $dark;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .visited__wrapper {
+    margin-top: 350px;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .visited__header {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 40px;
+
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  .visited-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .visited-item {
+    width: 100%;
+    margin-right: 0;
+
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
+  }
+
+  .visited-item--greece {
+    background: url("../img/greece-mob.png") no-repeat center center / cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/greece-mob2x.png");
+      background-size: cover;
+    }
+  }
+
+  .visited-item--albania {
+    background: url("../img/albania-mob.png") no-repeat center center / cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/albania-mob2x.png");
+      background-size: cover;
+    }
+  }
+
+  .visited-item--macedonia {
+    background: url("../img/macedonia-mob.png") no-repeat center center / cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/macedonia-mob2x.png");
+      background-size: cover;
+    }
+  }
+
+  .visited-item--montenegro {
+    background: url("../img/montenegro-mob.png") no-repeat center center / cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/montenegro-mob2x.png");
+      background-size: cover;
+    }
+  }
+
+  .visited-item--croatia {
+    background: url("../img/croatia-mob.png") no-repeat center center / cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/croatia-mob2x.png");
+      background-size: cover;
+    }
+  }
+}
