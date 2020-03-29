@@ -1,7 +1,5 @@
 'use strict';
 
-var body = document.querySelector('body');
-
 // Открытие/закрытие мобильного меню
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
@@ -36,33 +34,26 @@ jsTriggers.forEach(function (trigger) {
   });
 });
 
-// Поддержка плавного скролла в IE11
-var scrolls = [].slice.call(document.querySelectorAll('a[href*="#"]'));
-var animationTime = 600;
-var framesCount = 30;
+// Скролл
+const anchors = document.querySelectorAll('a[href*="#"]')
 
-scrolls.forEach(function (item) {
-  item.addEventListener('click', function (e) {
-    e.preventDefault();
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
 
-    var coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
+    const blockID = anchor.getAttribute('href').substr(1)
 
-    var scroller = setInterval(function () {
-      var scrollBy = coordY / framesCount;
-
-      if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-        window.scrollBy(0, scrollBy);
-      } else {
-        window.scrollTo(0, coordY);
-        clearInterval(scroller);
-      }
-    }, animationTime / framesCount);
-  });
-});
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
 
 // Открытие/закрытие модального окна
 var modalButtons = document.querySelectorAll('[data-modal-button]');
 var phoneModal = document.querySelector('[name=phone-modal]');
+var body = document.querySelector('body');
 
 modalButtons.forEach(modalHandler);
 
@@ -93,24 +84,16 @@ function openModal() {
     e.stopPropagation();
   });
 
-  window.addEventListener('keydown', function (evt) {
+  modal.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
       if (modal.classList.contains('modal-overlay--visible')) {
         modal.classList.remove('modal-overlay--visible');
+        body.classList.remove('overflow');
       }
     }
   });
 }
-
-document.querySelector('.price__content').onmouseover = function () {
-  document.querySelector('.price__title h3').style.cssText = 'color: #FE7865';
-  document.querySelector('.price__title p').style.cssText = 'color: #FE7865';
-};
-document.querySelector('.price__content').onmouseout = function () {
-  document.querySelector('.price__title h3').style.cssText = '';
-  document.querySelector('.price__title p').style.cssText = '';
-};
 
 // Валидация для телефона
 IMask(document.querySelector('#phone'), {
