@@ -60,6 +60,7 @@
 
 .visited-item--greece {
   background: url("../img/greece.png") no-repeat center center / cover;
+  background-color: #84A9CE;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/greece2x.png");
@@ -69,6 +70,7 @@
 
 .visited-item--albania {
   background: url("../img/albania.png") no-repeat center center / cover;
+  background-color: #0E545D;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/albania2x.png");
@@ -78,6 +80,7 @@
 
 .visited-item--macedonia {
     background: url("../img/macedonia.png") no-repeat center center / cover;
+    background-color: #9E6A4F;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/macedonia2x.png");
@@ -87,6 +90,7 @@
 
 .visited-item--montenegro {
   background: url("../img/montenegro.png") no-repeat center center / cover;
+  background-color: #628F55;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/montenegro2x.png");
@@ -96,6 +100,7 @@
 
 .visited-item--croatia {
   background: url("../img/croatia.png") no-repeat center center / cover;
+  background-color: #425D56;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/croatia2x.png");

@@ -7,8 +7,7 @@
   height: 860px;
   position: relative;
 
-  @media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/hero2x.png");
     background-size: cover;
   }
@@ -80,7 +79,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .hero__img {
+  .hero {
     background-image: url("../img/hero-tab.png");
     background-position: center 0;
     background-size: cover;
@@ -91,6 +90,10 @@
       background-image: url("../img/hero-tab2x.png");
       background-size: cover;
     }
+  }
+
+  .hero__content {
+    margin: 60px auto;
   }
 
   .hero__title {
@@ -126,7 +129,7 @@
 
     &::before {
       right: 40px;
-      top: 20px;
+      top: 15px;
     }
 
     &:hover {
@@ -141,7 +144,7 @@
 } 
 
 @media screen and (max-width: 767px) {
-  .hero__img {
+  .hero {
     background-image: url("../img/hero-mob.png");
     background-size: cover;
     height: 235px;
@@ -151,6 +154,11 @@
       background-image: url("../img/hero-mob2x.png");
       background-size: cover;
     }
+  }
+
+  .hero__content {
+    margin: 80px auto;
+    padding: 0 16px;
   }
 
   .hero__title {

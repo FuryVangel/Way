@@ -37,6 +37,15 @@
   }
 }
 
+.modal-window__img {
+  background-color: #8392A3;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/modal-img2x.png");
+    background-size: 338px 444px;
+  }
+}
+
 .modal-window__close-btn {
   position: absolute;
   top: 20px;

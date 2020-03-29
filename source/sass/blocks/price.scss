@@ -2,7 +2,8 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-top: 240px;
+  margin-top: 210px;
+  padding-top: 30px;
 }
 
 .price__wrapper {
@@ -267,7 +268,7 @@
   .price {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 75px;
+    margin-top: 112px;
   }
 
   .price__wrapper {
@@ -413,6 +414,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  .price {
+    margin-top: 75px;
+  }
+
   .price__wrapper {
     margin-bottom: 20px;
   }

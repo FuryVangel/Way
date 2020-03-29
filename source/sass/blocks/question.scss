@@ -21,6 +21,11 @@
         height: 455px;
         left: 25px;
         top: 0;
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/form-img2x.png");
+          background-size: 844px 455px;
+        }
     }
 }
 
