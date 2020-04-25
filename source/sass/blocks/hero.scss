@@ -1,6 +1,6 @@
 .hero {
   background-image: url("../img/hero.png");
-  background-color: #7093B4;
+  background-color: #7093b4;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -31,8 +31,8 @@
   h2 {
     font-size: 55px;
     font-weight: 600;
-    letter-spacing: -1.11px;   
-    padding-bottom: 40px;         
+    letter-spacing: -1.11px;
+    padding-bottom: 40px;
   }
 
   p {
@@ -107,9 +107,9 @@
 
     h2 {
       font-size: 30px;
-      line-height: 150%;       
-      letter-spacing: 0;    
-      padding-bottom: 20px;           
+      line-height: 150%;
+      letter-spacing: 0;
+      padding-bottom: 20px;
     }
 
     p {
@@ -141,7 +141,7 @@
       opacity: 1;
     }
   }
-} 
+}
 
 @media screen and (max-width: 767px) {
   .hero {
@@ -149,8 +149,7 @@
     background-size: cover;
     height: 235px;
 
-    @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-mob2x.png");
       background-size: cover;
     }
@@ -177,7 +176,6 @@
     }
 
     p {
-      width: 398px;
       padding-bottom: 15px;
       width: 288px;
       color: $dark;

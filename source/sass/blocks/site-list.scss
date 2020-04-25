@@ -32,19 +32,10 @@
   padding-left: 49px;
   color: $accentMain;
   text-decoration: underline;
-  position: relative;  
-
-  // svg {
-  //   fill: $accentMain;
-  //   position: absolute;
-  //   width: 24px;
-  //   height: 27px;
-  //   top: -8px;
-  //   left: 10px;
-  // }
+  position: relative;
 
   &::before {
-    content: ' ';
+    content: "";
     background: url("../img/icons/phone.svg") no-repeat;
     position: absolute;
     width: 24px;
@@ -55,10 +46,6 @@
 
   &:hover {
     color: $accentHover;
-
-    // svg {
-    //   fill: $accentHover;
-    // }
   }
 
   &:active {
@@ -67,45 +54,45 @@
 }
 
 @media screen and (max-width: 1023px) {
-    .site-list {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      width: 100%;
-    }
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .site-list__item {
-      margin-right: 0;
-    }
+  .site-list__item {
+    margin-right: 0;
+  }
 
-    .site-list__item--phone {
-      display: none;
-    }
+  .site-list__item--phone {
+    display: none;
+  }
 
-    .site-list__item a {
-      display: block;
-      width: 100%;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 140%;
-      color: #48494D;
-      background-color: $light;
-      margin-bottom: 30px;
-      padding: 17px 25px 17px 16px;
-      position: relative;
+  .site-list__item a {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: #48494d;
+    background-color: $light;
+    margin-bottom: 30px;
+    padding: 17px 25px 17px 16px;
+    position: relative;
 
-      &::after {
-        content: "";
-        width: 12px;
-        height: 12px;
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        background: url("../img/icons/arrow.svg") no-repeat;
-      }
+    &::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      background: url("../img/icons/arrow.svg") no-repeat;
     }
+  }
 
-    .site-list__item:first-child {
-      margin-top: 134px;
-    }
+  .site-list__item:first-child {
+    margin-top: 134px;
+  }
 }
